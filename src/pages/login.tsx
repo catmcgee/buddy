@@ -1,18 +1,20 @@
 import React from 'react';
 import Header from '../components/Header';
-import { ConnectWallet, useAddress } from '@thirdweb-dev/react';
-import useLogin from '@/lib/auth/useLogin';
+import Profile from '../components/Profile';
+import SignInButton from '@/components/SignInButton';
 
-function LoginPage() {
-    const address = useAddress();
-    const { mutate: requestLogin } = useLogin()
-
-    if (!address) {
-        return (<ConnectWallet/>)
-    }
+function ProfilePage() {
   return (
-<button onClick={() => requestLogin()}>Log in</button>
+    <div>
+      <Header />
+      <main>
+        <SignInButton />
+      </main>
+      <footer>
+        {/* Footer content goes here */}
+      </footer>
+    </div>
   );
 }
 
-export default LoginPage;
+export default ProfilePage;

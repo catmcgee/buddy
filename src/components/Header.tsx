@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 
 function Header() {
@@ -5,7 +6,7 @@ function Header() {
     <header className="flex items-center justify-between bg-white shadow-md h-16 px-4">
       <div className="text-lg font-bold">
         <Link href="/">
-          Tinder
+          Buddy
         </Link>
       </div>
       <nav className="flex items-center space-x-4">
@@ -23,7 +24,6 @@ function Header() {
           </div>
         </Link>
       </nav>
-     
     </header>
   );
 }

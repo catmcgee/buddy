@@ -37,9 +37,6 @@ function Settings() {
               >
                 {interest}
               </button>
-              
-
-              
             ))}
           </div>
         </div>

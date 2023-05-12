@@ -12,7 +12,7 @@ function Index() {
         <Swipe />
       </main>
       <footer>
-        {/* Footer */}
+        {/* Footer content goes here */}
       </footer>
     </div>
   );
