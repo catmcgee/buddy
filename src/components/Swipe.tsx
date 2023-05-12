@@ -1,28 +1,6 @@
 import React, { useState, useCallback, useRef } from 'react';
 import TinderCard from 'react-tinder-card';
-import { ProfileSortCriteria, useExploreProfilesQuery } from '@/graphql/generated';
-
-// Dummy user data for demonstration purposes
-const users = [
-  {
-    id: 1,
-    name: 'John Doe',
-    image: 'https://via.placeholder.com/150',
-    bio: 'Lorem ipsum dolor sit amet.',
-  },
-  {
-    id: 2,
-    name: 'Cat McGee',
-    image: 'https://via.placeholder.com/150',
-    bio: 'i am cat',
-  },
-  {
-    id: 3,
-    name: 'Kevin Canlas',
-    image: 'https://via.placeholder.com/150',
-    bio: 'i am kevin',
-  },
-];
+import { useRecommendedProfilesQuery } from '@/graphql/generated';
 
 type SwipeDirection = 'left' | 'right';
 
@@ -35,14 +13,12 @@ function Swipe() {
     picture: any;
   };
   
-  const { data, error, isLoading } = useExploreProfilesQuery({
-    request: {
-      sortCriteria: ProfileSortCriteria.MostFollowers
-    },
+  const { data, error, isLoading } = useRecommendedProfilesQuery({
+   
   });
 
   // Map the fetched data to an array of profiles
-  const profiles: Profile[] = data?.exploreProfiles.items.map((profile): Profile => ({
+  const profiles: Profile[] = data?.recommendedProfiles.map((profile): Profile => ({
     id: profile.id,
     name: profile.name,
     bio: profile.bio,
