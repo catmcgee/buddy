@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef } from 'react';
 import TinderCard from 'react-tinder-card';
 import { ProfileSortCriteria, useExploreProfilesQuery } from '@/graphql/generated';
 
-// Dummy user data 
+// Dummy user data for demonstration purposes
 const users = [
   {
     id: 1,
