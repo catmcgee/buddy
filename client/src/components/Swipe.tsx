@@ -297,46 +297,48 @@ function Swipe() {
             </div>
             <div className="dislike-like mt-8 w-full flex justify-between z-20">
               <button
-                className="flex items-center justify-center bg-red-500 w-[120px] h-[40px] text-white font-medium text-sm px-6 py-2 rounded-md hover:bg-red-600"
+                className="flex items-center justify-center space-x-2 bg-red-500 w-[120px] h-[40px] text-white font-medium text-sm px-6 py-2 rounded-md hover:bg-red-600"
                 onClick={() => onButtonClick("left")}
               >
-                <div>Pass</div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="24"
-                  viewBox="0 0 25 24"
-                  fill="none"
-                >
-                  <path
-                    d="M6.5 18L12.5 12M12.5 12L18.5 6M12.5 12L6.5 6M12.5 12L18.5 18"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <p className="text-base uppercase">Pass</p>
+                <div className="icon w-4 h-4 aspect-square">
+                  <svg
+                    className="w-full h-auto"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M6.5 18L12.5 12M12.5 12L18.5 6M12.5 12L6.5 6M12.5 12L18.5 18"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
               </button>
               <button
-                className="flex items-center justify-center bg-green-500 w-[120px] h-[40px] text-white font-medium text-sm px-6 pl-8 py-2 rounded-md hover:bg-green-600"
+                className="flex items-center justify-center space-x-2 bg-green-500 w-[120px] h-[40px] text-white font-medium text-sm px-6 pl-8 py-2 rounded-md hover:bg-green-600"
                 onClick={() => onButtonClick("right")}
               >
-                <div>Match</div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="24"
-                  viewBox="0 0 25 24"
-                  fill="none"
-                >
-                  <path
-                    d="M4.5 12.3744L9.8513 17.7199L10.2789 16.9723C12.5713 12.9638 15.7438 9.52807 19.5572 6.92405L20.5 6.28027"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <p className="text-base uppercase">Match</p>
+                <div className="icon w-4 h-4 aspect-square">
+                  <svg
+                    className="w-full h-auto"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.5 12.3744L9.8513 17.7199L10.2789 16.9723C12.5713 12.9638 15.7438 9.52807 19.5572 6.92405L20.5 6.28027"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
               </button>
             </div>
           </TinderCard>
