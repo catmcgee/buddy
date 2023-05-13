@@ -26,7 +26,7 @@ function Header() {
                 stroke-linejoin="round"
               />
             </svg>
-            <p>Home</p>
+            <p className="hidden min-[512px]:block">Home</p>
           </div>
         </Link>
         <Link href="/matches" passHref>
@@ -47,7 +47,7 @@ function Header() {
                 stroke-linejoin="round"
               />
             </svg>
-            <p>Matches</p>
+            <p className="hidden min-[512px]:block ">Matches</p>
           </div>
         </Link>
         <Link href="/profile" passHref>
@@ -75,7 +75,7 @@ function Header() {
                 stroke-linejoin="round"
               />
             </svg>
-            <p>Profile</p>
+            <p className="hidden min-[512px]:block ">Profile</p>
           </div>
         </Link>
       </nav>

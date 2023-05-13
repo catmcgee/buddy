@@ -82,7 +82,12 @@ function Swipe() {
 
   return (
     <div className="main-container relative flex flex-col items-center justify-center w-full min-h-screen h-auto">
-      <div className="card-container w-full min-h-screen h-auto absolute top-0 max-w-lg sm:rounded-lg">
+      <div className="title-container w-full max-w-lg">
+        <h1 className="text-white text-3xl font-bold absolute top-10  px-4 min-[512px]:px-0">
+          Discover
+        </h1>
+      </div>
+      <div className="card-container rounded-lg w-full min-h-screen h-auto absolute top-20 max-w-lg sm:rounded-lg">
         {filteredUsers.map((user, index) => (
           <TinderCard
             ref={index === 0 ? tinderCardRef : undefined}
@@ -91,7 +96,7 @@ function Swipe() {
               onSwipe(dir as SwipeDirection, user.id)
             }
             preventSwipe={["up", "down"]}
-            className={`absolute shadow-md w-full h-auto p-4 bg-white transform transition-all duration-300 ${
+            className={`absolute rounded-lg  shadow-md w-full h-auto p-4 bg-white transform transition-all duration-300 ${
               index === 0 ? "z-10" : "hidden"
             }`}
           >
