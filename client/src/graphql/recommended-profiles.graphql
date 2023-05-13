@@ -2,4 +2,4 @@ query recommendedProfiles {
   recommendedProfiles {
     ...ProfileFields
   }
-}n
+}
