@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="flex items-center justify-between bg-white shadow-md h-16 px-4">
       <div className="text-lg font-bold text-black hover:text-gray-600">
-        <Link href="/">Buddy</Link>
+        <Link href="/">buddy</Link>
       </div>
       <nav className="flex items-center space-x-4">
         <Link href="/" passHref>

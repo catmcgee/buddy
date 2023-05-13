@@ -83,7 +83,7 @@ function Swipe() {
   return (
     <div className="main-container relative flex flex-col items-center justify-center w-full min-h-screen h-auto">
       <div className="title-container w-full max-w-lg">
-        <h1 className="text-white text-3xl font-bold absolute top-10  px-4 min-[512px]:px-0">
+        <h1 className="text-black text-3xl font-bold absolute top-10  px-4 min-[512px]:px-0">
           Discover
         </h1>
       </div>

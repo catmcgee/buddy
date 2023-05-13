@@ -24,7 +24,7 @@ function Settings() {
   return (
     <div className="settings-component flex flex-col items-center">
       <div className="w-full max-w-lg mt-10">
-        <h2 className="text-2xl font-bold text-white  px-4 min-[512px]:px-0">
+        <h2 className="text-2xl font-bold text-black  px-4 min-[512px]:px-0">
           Preferences
         </h2>
         <div className="bg-white rounded-lg shadow-md p-6 mt-2">
