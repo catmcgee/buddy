@@ -4,7 +4,7 @@ import Link from "next/link";
 function Header() {
   return (
     <header className="flex items-center justify-between bg-white shadow-md h-16 px-4">
-      <div className="text-lg font-bold">
+      <div className="text-lg font-bold text-black">
         <Link href="/">Buddy</Link>
       </div>
       <nav className="flex items-center space-x-4">

@@ -111,7 +111,7 @@ function Swipe() {
                 alt={`${user.name} profile`}
               />
               <div className="main-details-container absolute w-full bottom-0 p-4 bg-gradient-to-t from-black">
-                <div className="name flex items-center space-x-2 relative w-full">
+                <div className="name flex items-center space-x-2 -left-1 relative w-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

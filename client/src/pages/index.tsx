@@ -13,7 +13,7 @@ function Index() {
     <ApolloProvider client={client}>
       <div>
         <Header />
-        <main className="min-h-screen h-auto pb-10">
+        <main className="min-h-screen h-auto pt-4 pb-20">
           <Swipe />
         </main>
         <footer>{/* Footer content goes here */}</footer>
