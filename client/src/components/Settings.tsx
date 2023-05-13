@@ -22,13 +22,14 @@ function Settings() {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-1/2 mt-10">
-        <h1 className="text-3xl font-bold mb-2">
-          Settings
-        </h1>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-lg font-bold mb-4">
+    <div className="settings-component flex flex-col items-center">
+      <div className="w-full max-w-lg mt-10">
+        <h2 className="text-2xl font-bold mb-2 text-white">
+          Preferences
+        </h2>
+        <p className="text-base text-gray-400">What are you looking for in a hackathon partner?</p>
+        <div className="bg-white rounded-lg shadow-md p-6 mt-4">
+          <h2 className="text-lg font-bold mb-4 text-black">
             Select badges to filter
           </h2>
           <div className="flex flex-wrap">

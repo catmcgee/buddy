@@ -7,22 +7,28 @@ function Profile() {
   const { isSignedInQuery, profileQuery } = useLensUser();
 
   if (profileQuery.isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="profile-component">Loading...</div>
+    );
   }
 
   if (!profileQuery.data?.defaultProfile) {
-    return <div>No Lens Profile.</div>;
+    return (
+      <div className="profile-component">
+        No Lens Profile.
+      </div>
+    );
   }
 
   if (profileQuery.data?.defaultProfile) {
     return (
-      <div className="flex flex-col items-center">
-        <div className="w-1/2 mt-10">
+      <div className="profile-component flex flex-col items-center">
+        <div className="w-full max-w-lg mt-10">
           <h1 className="text-3xl font-bold mb-2">
             My Profile
           </h1>
           <div className="bg-white rounded-lg shadow-md p-6">
-            <div className="flex items-center mb-6">
+            <div className="flex flex-col items-start justify-start mb-6 max-w-max">
               <MediaRenderer
                 // @ts-ignore
                 src={
@@ -30,16 +36,17 @@ function Profile() {
                     ?.picture?.original?.url || ""
                 }
                 style={{
-                  width: 60,
-                  height: 60,
+                  width: 120,
+                  height: 120,
                   borderRadius: "50%",
                 }}
               />
-              <div>
-                <h2 className="text-xl font-bold">
+              <div className="name-handle">
+                <h2 className="text-xl font-bold text-black">
                   {profileQuery?.data?.defaultProfile?.name}
                 </h2>
                 <p className="text-gray-600">
+                  @
                   {
                     profileQuery?.data?.defaultProfile
                       ?.handle
@@ -49,7 +56,7 @@ function Profile() {
             </div>
             <div className="flex flex-col space-y-6">
               <div>
-                <h3 className="text-lg font-bold mb-2">
+                <h3 className="text-lg font-bold mb-2 text-black">
                   My Proven Skills
                 </h3>
                 <div className="flex space-x-2">
@@ -65,7 +72,7 @@ function Profile() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-bold mb-2">
+                <h3 className="text-lg font-bold mb-2 text-black">
                   My Bio
                 </h3>
                 <p className="text-gray-600">

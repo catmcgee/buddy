@@ -7,7 +7,7 @@ function ProfilePage() {
   return (
     <div>
       <Header />
-      <main>
+      <main className='pb-10'>
         <Profile />
         <Settings />
       </main>

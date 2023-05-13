@@ -82,7 +82,7 @@ function Swipe() {
 
   return (
     <div className="main-container relative flex flex-col items-center justify-center w-full min-h-screen h-auto">
-      <div className="card-container w-full absolute top-0 max-w-lg sm:rounded-lg">
+      <div className="card-container w-full min-h-screen h-auto absolute top-0 max-w-lg sm:rounded-lg">
         {filteredUsers.map((user, index) => (
           <TinderCard
             ref={index === 0 ? tinderCardRef : undefined}
