@@ -295,7 +295,7 @@ function Swipe() {
                 </p>
               </button>
             </div>
-            <div className="dislike-like mt-8 w-full flex justify-between z-20">
+            <div className="dislike-like mt-8 w-full flex justify-center space-x-4 z-20">
               <button
                 className="flex items-center justify-center space-x-2 bg-red-500 w-[120px] h-[40px] text-white font-medium text-sm px-6 py-2 rounded-md hover:bg-red-600"
                 onClick={() => onButtonClick("left")}
@@ -344,11 +344,11 @@ function Swipe() {
           </TinderCard>
         ))}
       </div>
-      {lastDirection && (
+      {/* {lastDirection && (
         <div className="bg-black bg-opacity-50 text-white text-lg font-bold px-6 py-2 rounded-md mt-16 absolute top-4 z-20">
           {lastDirection === "left" ? "No!" : "Yes!"}
         </div>
-      )}
+      )} */}
       {/* <div className="dislike-like absolute bottom-8 flex space-x-4 z-20">
         <button
           className="bg-red-500 text-white font-medium text-sm px-6 py-2 rounded-md hover:bg-red-600"

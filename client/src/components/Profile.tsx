@@ -130,13 +130,13 @@ function Profile() {
                 </h3>
                 <div className="flex space-x-2">
                   <span className="bg-gray-200 px-2 py-1 rounded-full text-sm font-medium text-gray-700">
-                    ZK interest 1
+                    ZK Badge 1
                   </span>
                   <span className="bg-gray-200 px-2 py-1 rounded-full text-sm font-medium text-gray-700">
-                    ZK interest 2
+                    ZK Badge 2
                   </span>
                   <span className="bg-gray-200 px-2 py-1 rounded-full text-sm font-medium text-gray-700">
-                    Zk interest 3
+                    Zk Badge 3
                   </span>
                 </div>
               </div>
