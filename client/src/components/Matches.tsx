@@ -65,7 +65,7 @@ const Matches: React.FC = () => {
           <p className="text-gray-600">No matches yet.</p>
         )} */}
         <ul className="match-list flex flex-col gap-4">
-          <li className="match w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
+          <li className="match kevin w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
             <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
               <img
                 className="w-full h-auto"
@@ -75,13 +75,94 @@ const Matches: React.FC = () => {
             </div>
             <div className="details flex flex-col w-full overflow-hidden">
               <div className="detail flex justify-start w-full items-center">
-                <p className="text-xl font-bold min-[500px]:text-xl text-black">
+                <p className="name text-xl font-bold min-[500px]:text-xl text-black">
                   Kevin Canlas
                 </p>
               </div>
               <div className="detail flex justify-start w-full items-center mt-0">
-                <p className="text-sm min-[500px]:text-base text-gray-500">
+                <p className="lens-id text-sm min-[500px]:text-base text-gray-500">
                   @kvncnls.lens
+                </p>
+              </div>
+              <div className="detail flex justify-start w-full items-center mt-4 overflow-hidden">
+                <p className="bio text-sm min-[500px]:text-base text-black w-96 whitespace-nowrap overflow-hidden text-ellipsis">
+                  Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit...
+                </p>
+              </div>
+            </div>
+          </li>
+          <li className="match cat w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
+            <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
+              <img
+                className="w-full h-auto"
+                src="../images/cat.jpeg"
+                alt=""
+              />
+            </div>
+            <div className="details flex flex-col w-full overflow-hidden">
+              <div className="detail flex justify-start w-full items-center">
+                <p className="name text-xl font-bold min-[500px]:text-xl text-black">
+                  Cat McGee
+                </p>
+              </div>
+              <div className="detail flex justify-start w-full items-center mt-0">
+                <p className="lens-id text-sm min-[500px]:text-base text-gray-500">
+                  @CatMcGeeCode.lens
+                </p>
+              </div>
+              <div className="detail flex justify-start w-full items-center mt-4 overflow-hidden">
+                <p className="bio text-sm min-[500px]:text-base text-black w-96 whitespace-nowrap overflow-hidden text-ellipsis">
+                  Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit...
+                </p>
+              </div>
+            </div>
+          </li>
+          <li className="match kevin w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
+            <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
+              <img
+                className="w-full h-auto"
+                src="../images/kevin.JPG"
+                alt=""
+              />
+            </div>
+            <div className="details flex flex-col w-full overflow-hidden">
+              <div className="detail flex justify-start w-full items-center">
+                <p className="name text-xl font-bold min-[500px]:text-xl text-black">
+                  Kevin Canlas
+                </p>
+              </div>
+              <div className="detail flex justify-start w-full items-center mt-0">
+                <p className="lens-id text-sm min-[500px]:text-base text-gray-500">
+                  @kvncnls.lens
+                </p>
+              </div>
+              <div className="detail flex justify-start w-full items-center mt-4 overflow-hidden">
+                <p className="bio text-sm min-[500px]:text-base text-black w-96 whitespace-nowrap overflow-hidden text-ellipsis">
+                  Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit...
+                </p>
+              </div>
+            </div>
+          </li>
+          <li className="match cat w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
+            <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
+              <img
+                className="w-full h-auto"
+                src="../images/cat.jpeg"
+                alt=""
+              />
+            </div>
+            <div className="details flex flex-col w-full overflow-hidden">
+              <div className="detail flex justify-start w-full items-center">
+                <p className="name text-xl font-bold min-[500px]:text-xl text-black">
+                  Cat McGee
+                </p>
+              </div>
+              <div className="detail flex justify-start w-full items-center mt-0">
+                <p className="lens-id text-sm min-[500px]:text-base text-gray-500">
+                  @CatMcGeeCode.lens
                 </p>
               </div>
               <div className="detail flex justify-start w-full items-center mt-4 overflow-hidden">
