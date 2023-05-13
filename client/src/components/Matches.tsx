@@ -24,7 +24,7 @@ const MatchedProfile: React.FC<MatchedProfileProps> = ({
   return (
     <li className="bg-white rounded-lg shadow px-5 py-3 my-3 flex items-center justify-between">
       <div className="text-lg font-semibold text-gray-700">
-        Match ID: {matchId}
+        match hover:bg-gray-300 ID: {matchId}
       </div>
       <div className="text-sm text-gray-500">
         {data ? data?.profile?.name : "Loading..."}
@@ -64,8 +64,8 @@ const Matches: React.FC = () => {
         ) : (
           <p className="text-gray-600">No matches yet.</p>
         )} */}
-        <ul className="match-list flex flex-col gap-4">
-          <li className="match kevin w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
+        <ul className="match-list flex flex-col gap-0">
+          <li className="match hover:bg-gray-100 kevin w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
             <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
               <img
                 className="w-full h-auto"
@@ -92,7 +92,7 @@ const Matches: React.FC = () => {
               </div>
             </div>
           </li>
-          <li className="match cat w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
+          <li className="match hover:bg-gray-100 cat w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
             <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
               <img
                 className="w-full h-auto"
@@ -119,7 +119,7 @@ const Matches: React.FC = () => {
               </div>
             </div>
           </li>
-          <li className="match kevin w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
+          <li className="match hover:bg-gray-100 kevin w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
             <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
               <img
                 className="w-full h-auto"
@@ -146,7 +146,7 @@ const Matches: React.FC = () => {
               </div>
             </div>
           </li>
-          <li className="match cat w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
+          <li className="match hover:bg-gray-100 cat w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
             <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
               <img
                 className="w-full h-auto"
