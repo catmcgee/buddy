@@ -15,10 +15,10 @@ function Swipe() {
     bio: string | null | undefined;
     picture: any;
   };
-  
+
   const { data, error, isLoading } = useRecommendedProfilesQuery();
   const [createLike] = useMutation(CREATE_LIKE_MUTATION);
-  
+
   // Map the fetched data to an array of profiles
   const profiles: Profile[] = data?.recommendedProfiles.map((profile): Profile => ({
     id: profile.id,
@@ -26,7 +26,7 @@ function Swipe() {
     bio: profile.bio,
     picture: profile.picture || null,
   })) || [];
-  
+
   const [lastDirection, setLastDirection] = useState<SwipeDirection | null>(null);
   const [swipedProfiles, setSwipedProfiles] = useState<string[]>([]);
   const tinderCardRef = useRef<any>(null);
@@ -37,7 +37,7 @@ function Swipe() {
     async (direction: SwipeDirection, id: string) => {
       setLastDirection(direction);
       setSwipedProfiles(prevSwipedProfiles => [...prevSwipedProfiles, id]);
-  
+
       if (direction === 'right') { // Only call createLike when swiping right
         try {
           const { data } = await createLike({
@@ -55,7 +55,7 @@ function Swipe() {
     },
     [createLike, profileQuery?.data?.defaultProfile?.id]
   );
-  
+
 
   const filteredUsers = profiles.filter((user) => !swipedProfiles.includes(user.id));
 
@@ -66,19 +66,19 @@ function Swipe() {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full">
-      <div className="w-4/5 mt-10 relative">
+    <div className="main-container relative flex flex-col items-center justify-center w-full min-h-screen h-auto">
+      <div className="card-container w-full absolute top-8 max-w-lg">
         {filteredUsers.map((user, index) => (
          <TinderCard
          ref={index === 0 ? tinderCardRef : undefined}
          key={user.id}
          onSwipe={(dir) => onSwipe(dir as SwipeDirection, user.id)}
          preventSwipe={['up', 'down']}
-         className={`absolute rounded-lg shadow-md w-full h-80 p-4 bg-white transform transition-all duration-300 ${
+         className={`absolute shadow-md w-full h-auto p-4 bg-white transform transition-all duration-300 ${
            index === 0 ? 'z-10' : 'hidden'
          }`}
        >
-         <div className="w-full h-56 rounded-lg overflow-hidden mb-4 aspect-w-1 aspect-h-1">
+         <div className="w-full h-auto rounded-lg overflow-hidden mb-4 aspect-square">
            <img
              src={
                (user.picture?.original?.url ||
@@ -101,7 +101,7 @@ function Swipe() {
           {lastDirection === 'left' ? 'No!' : 'Yes!'}
         </div>
       )}
-      <div className="flex mt-10 space-x-4 z-20">
+      <div className="dislike-like absolute bottom-8 flex mt-10 space-x-4 z-20">
         <button
           className="bg-red-500 text-white font-medium text-sm px-6 py-2 rounded-md hover:bg-red-600"
           onClick={() => onButtonClick('left')}
@@ -128,7 +128,7 @@ function Swipe() {
       )}
     </div>
   );
-  
+
 }
 
 export default Swipe;
