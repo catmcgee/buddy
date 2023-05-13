@@ -28,19 +28,22 @@ function Profile() {
             My Profile
           </h1>
           <div className="bg-white rounded-lg shadow-md p-6">
-            <div className="flex flex-row space-x-4 items-start justify-start mb-6 max-w-max">
-              <MediaRenderer
-                // @ts-ignore
-                src={
-                  profileQuery?.data?.defaultProfile
-                    ?.picture?.original?.url || ""
-                }
-                style={{
-                  width: 144,
-                  height: 144,
-                  borderRadius: "50%",
-                }}
-              />
+            <div className="flex flex-col space-y-4 min-[393px]:flex-row min-[393px]:space-y-0 min-[393px]:space-x-4 items-start justify-start mb-6 max-w-max">
+              <div className="image-container w-full max-w-[360px] mx-auto min-[393px]:w-[144px]">
+                <MediaRenderer
+                  // @ts-ignore
+                  src={
+                    profileQuery?.data?.defaultProfile
+                      ?.picture?.original?.url || ""
+                  }
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    borderRadius: "50%",
+                  }}
+                />
+              </div>
+
               <div className="profile-details">
                 <h2 className="text-2xl font-bold text-black mb-2">
                   {profileQuery?.data?.defaultProfile?.name}
@@ -128,7 +131,7 @@ function Profile() {
                 <h3 className="text-lg font-bold mb-2 text-black">
                   My Proven Skills
                 </h3>
-                <div className="flex space-x-2">
+                <div className="flex gap-2 flex-wrap">
                   <span className="bg-gray-200 px-2 py-1 rounded-full text-sm font-medium text-gray-700">
                     ZK Badge 1
                   </span>

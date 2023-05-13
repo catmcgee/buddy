@@ -50,7 +50,7 @@ const Matches: React.FC = () => {
     return (
       <div className="container max-w-lg mx-auto px-4 min-[512px]:px-0">
         <h1 className="text-3xl font-bold text-white mt-10 mb-5">
-          Your Matches
+          My Matches
         </h1>
         {data?.allMatches && data.allMatches.length > 0 ? (
           <ul>
