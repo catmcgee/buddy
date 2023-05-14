@@ -246,7 +246,17 @@ function Swipe() {
               </div>
               {user.twitter && (
                 <h4 className="text-base text-black mb-2">
-                  {user.twitter}
+                  <a
+                    href={
+                      "http://www.twitter.com/" +
+                      user.twitter
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {user.twitter}
+                  </a>
                 </h4>
               )}
               {!user.twitter && (
