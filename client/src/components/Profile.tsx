@@ -28,8 +28,8 @@ function Profile() {
             My Profile
           </h1>
           <div className="bg-white rounded-lg shadow-md p-4 w-full">
-            <div className="main-details flex flex-col space-y-4 min-[400px]:flex-row min-[400px]:space-y-0 min-[400px]:space-x-4 items-start justify-start mb-6">
-              <div className="image-container w-full min-w-[120px] max-w-[360px] min-[400px]:w-[144px]">
+            <div className="main-details flex flex-col space-y-4 min-[420px]:flex-row min-[420px]:space-y-0 min-[420px]:space-x-4 items-start justify-start mb-6">
+              <div className="image-container w-full min-w-[120px] max-w-[360px] min-[420px]:w-[144px]">
                 <MediaRenderer
                   // @ts-ignore
                   src={
@@ -132,6 +132,7 @@ function Profile() {
                       }
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="hover:underline"
                     >
                       {
                         profileQuery?.data?.defaultProfile
