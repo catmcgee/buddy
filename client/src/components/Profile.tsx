@@ -27,9 +27,9 @@ function Profile() {
           <h1 className="text-3xl text-black font-bold mb-2 px-4 min-[512px]:px-0">
             My Profile
           </h1>
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <div className="flex flex-col space-y-4 min-[393px]:flex-row min-[393px]:space-y-0 min-[393px]:space-x-4 items-start justify-start mb-6 max-w-max">
-              <div className="image-container w-full max-w-[360px] mx-auto min-[393px]:w-[144px]">
+          <div className="bg-white rounded-lg shadow-md p-4 w-full">
+            <div className="main-details flex flex-col space-y-4 min-[400px]:flex-row min-[400px]:space-y-0 min-[400px]:space-x-4 items-start justify-start mb-6">
+              <div className="image-container w-full min-w-[120px] max-w-[360px] min-[400px]:w-[144px]">
                 <MediaRenderer
                   // @ts-ignore
                   src={
@@ -44,7 +44,7 @@ function Profile() {
                 />
               </div>
 
-              <div className="profile-details">
+              <div className="profile-detail w-full max-w-[300px]">
                 <h2 className="text-2xl font-bold text-black mb-2">
                   {profileQuery?.data?.defaultProfile?.name}
                 </h2>

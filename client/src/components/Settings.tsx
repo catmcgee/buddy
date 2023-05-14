@@ -27,7 +27,7 @@ function Settings() {
         <h2 className="text-2xl font-bold text-black  px-4 min-[512px]:px-0">
           Preferences
         </h2>
-        <div className="bg-white rounded-lg shadow-md p-6 mt-2">
+        <div className="bg-white rounded-lg shadow-md p-4 mt-2">
           <h2 className="text-xl text-black mb-2">
             What are you looking for in a hackathon partner?
           </h2>
