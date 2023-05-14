@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/catmcgee/buddy">
-    <img src="https://i.ibb.co/gSrndT9/buddy-cover.jpg" alt="Logo" width="140" height="80">
+    <img src="https://i.ibb.co/gSrndT9/buddy-cover.jpg" alt="Logo">
   </a>
 
 <h3 align="center">Buddy</h3>
@@ -51,7 +51,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://i.ibb.co/tx9bHs8/Screenshot-2023-05-14-at-05-36-20.png)
+[Screenshot](https://i.ibb.co/tx9bHs8/Screenshot-2023-05-14-at-05-36-20.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -59,10 +59,9 @@
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
-* [![Lens][LensProtocol]][Lens-url]
-* [![Sismo][SismoProtocol]][Sismo-url]
-* [![Polygon][PolygonProtocol]][Polygon-url]
-
+* Lens
+* Sismo
+* Polygon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,7 +81,7 @@ Find individual instructions for getting set up in client and server repositorie
 <!-- CONTACT -->
 ## About us
 
-Cat McGee (dev) - [@catmcgeecode](https://twitter.com/catmcgeecode)
+Cat McGee (dev) - [@catmcgeecode](https://twitter.com/catmcgeecode) and
 Kevin Canlas (design) - [@kvncnls](https://twitter.com/kvncnls)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
