@@ -17,8 +17,8 @@ function Swipe() {
     name: string | null | undefined;
     bio: string | null | undefined;
     lens: string | null | undefined;
-    twitter: any;
-    ens: any,
+    twitter: string | null | undefined;
+    ens: any;
     picture: any;
   };
 
@@ -34,11 +34,28 @@ function Swipe() {
         name: profile.name,
         bio: profile.bio,
         lens: profile.handle,
-        twitter: profile.onChainIdentity.sybilDotOrg.source.twitter.handle,
+        twitter:
+          profile.onChainIdentity.sybilDotOrg.source.twitter
+            .handle,
         ens: profile.onChainIdentity.ens?.name,
         picture: profile.picture || null,
       })
     ) || [];
+
+  // <a
+  //   href={
+  //     "http://www.twitter.com/" +
+  //     profileQuery?.data?.defaultProfile?.attributes?.[8]
+  //       ?.value
+  //   }
+  //   target="_blank"
+  //   rel="noopener noreferrer"
+  // >
+  //   {
+  //     profileQuery?.data?.defaultProfile?.attributes?.[8]
+  //       ?.value
+  //   }
+  // </a>;
 
   const [lastDirection, setLastDirection] =
     useState<SwipeDirection | null>(null);
@@ -176,10 +193,16 @@ function Swipe() {
                   />
                 </svg>
               </div>
-
-              <p className="text-base text-black mb-2">
-                {user.bio}
-              </p>
+              {user.bio && (
+                <p className="text-base text-black mb-2">
+                  {user.bio}
+                </p>
+              )}
+              {!user.bio && (
+                <p className="text-base text-black mb-2">
+                  No bio written yet.
+                </p>
+              )}
             </div>
             <div className="ens flex space-x-2">
               <div className="icon-container w-6 h-6 aspect-square flex justify-center items-center">
@@ -206,11 +229,18 @@ function Swipe() {
                   />
                 </svg>
               </div>
-
-              <h4 className="text-base text-black mb-2">
-                {user.ens}
-              </h4>
+              {user.ens && (
+                <h4 className="text-base text-black mb-2">
+                  {user.ens}
+                </h4>
+              )}
+              {!user.ens && (
+                <h4 className="text-base text-black mb-2">
+                  No ENS connected.
+                </h4>
+              )}
             </div>
+
             <div className="twitter flex space-x-2">
               <div className="icon-container w-6 h-6 aspect-square flex justify-center items-center">
                 <svg
@@ -229,10 +259,16 @@ function Swipe() {
                   />
                 </svg>
               </div>
-
-              <h4 className="text-base text-black mb-2">
-                {user.twitter}
-              </h4>
+              {user.twitter && (
+                <h4 className="text-base text-black mb-2">
+                  {user.twitter}
+                </h4>
+              )}
+              {!user.twitter && (
+                <h4 className="text-base text-black mb-2">
+                  No Twitter account connected.
+                </h4>
+              )}
             </div>
             <h3 className="zoinks pointer-events-none text-2xl text-black font-bold my-2">
               Zoinks
