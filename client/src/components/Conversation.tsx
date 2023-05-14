@@ -126,7 +126,7 @@ const XMTPComponent: React.FC<{ matchId?: string }> = ({
                 key={message.id}
                 className="text-sm text-gray-700 flex w-full items-start justify-start gap-2"
               >
-                <div className="image-container w-10 h-10 min-w-[40px] overflow-hidden rounded-full bg-gray-500 aspect-square"></div>
+                {/* <div className="image-container w-10 h-10 min-w-[40px] overflow-hidden rounded-full bg-gray-500 aspect-square"></div> */}
                 <p className="w-full h-auto">
                   {message.content}
                 </p>
