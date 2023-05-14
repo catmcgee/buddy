@@ -42,21 +42,6 @@ function Swipe() {
       })
     ) || [];
 
-  // <a
-  //   href={
-  //     "http://www.twitter.com/" +
-  //     profileQuery?.data?.defaultProfile?.attributes?.[8]
-  //       ?.value
-  //   }
-  //   target="_blank"
-  //   rel="noopener noreferrer"
-  // >
-  //   {
-  //     profileQuery?.data?.defaultProfile?.attributes?.[8]
-  //       ?.value
-  //   }
-  // </a>;
-
   const [lastDirection, setLastDirection] =
     useState<SwipeDirection | null>(null);
   const [swipedProfiles, setSwipedProfiles] = useState<
@@ -110,7 +95,7 @@ function Swipe() {
           Discover
         </h1>
       </div>
-      <div className="card-container rounded-lg w-full min-h-screen h-auto absolute top-20 max-w-lg sm:rounded-lg">
+      <div className="card-container rounded-lg w-full min-h-[130vh] h-auto relative top-20 max-w-lg sm:rounded-lg">
         {filteredUsers.map((user, index) => (
           <TinderCard
             ref={index === 0 ? tinderCardRef : undefined}
