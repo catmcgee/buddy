@@ -22,24 +22,25 @@ const MatchedProfile: React.FC<MatchedProfileProps> = ({
     request: { profileId: matchId },
   });
   const handleClick = () => {
-    // Replace "conversation-page" with the path to your conversation page component
     router.push(`/conversation/${matchId}`);
   };
   if (isLoading) return <p>Loading matches...</p>;
   if (error) return <p>Error loading matches</p>;
 
   return (
-    <li
-      onClick={handleClick}
-      className="w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer"
-    >
+      <li onClick={handleClick}
+
+      className="w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
+        
       <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
         <img
           className="w-full h-auto"
-          src={(data?.profile?.picture?.original?.url).replace(
+          src={(
+            data?.profile?.picture?.original?.url 
+          ).replace(
             "ipfs://",
             "https://cloudflare-ipfs.com/ipfs/"
-          )}
+          )}  
           alt=""
         />
       </div>
@@ -51,9 +52,7 @@ const MatchedProfile: React.FC<MatchedProfileProps> = ({
         </div>
         <div className="detail flex justify-start w-full items-center mt-0">
           <p className="lens-id text-sm min-[500px]:text-base text-gray-500">
-            {data
-              ? data?.profile?.handle
-              : "Loading handle..."}
+            {data ? data?.profile?.handle : "Loading handle..."}
           </p>
         </div>
         <div className="detail flex justify-start w-full items-center mt-4 overflow-hidden">
@@ -77,7 +76,7 @@ const Matches: React.FC = () => {
     }
   );
   return (
-    <div className="container max-w-lg mx-auto px-4 min-[540px]:px-0">
+    <div className="container mx-auto px-4">
       <h1 className="text-2xl font-bold text-gray-900 mt-10 mb-5">
         My Matches
       </h1>
