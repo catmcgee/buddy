@@ -364,7 +364,7 @@ function Swipe() {
                 className="flex items-center justify-center space-x-2 bg-green-500 w-[120px] h-[40px] text-white font-medium text-sm px-6 pl-8 py-2 rounded-md hover:bg-green-600"
                 onClick={() => onButtonClick("right")}
               >
-                <p className="text-base uppercase">Match</p>
+                <p className="text-base uppercase">Like</p>
                 <div className="icon w-4 h-4 aspect-square">
                   <svg
                     className="w-full h-auto"

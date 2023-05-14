@@ -11,7 +11,7 @@ function Header() {
         <Link href="/" passHref>
           <div className="group text-black hover:text-gray-600 text-sm font-medium cursor-pointer flex items-center space-x-2">
             <svg
-              className="group-hover:opacity-60 transition-all duration-300"
+              className="group-hover:opacity-60 group-hover:-rotate-12 transition-all duration-300"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -26,13 +26,13 @@ function Header() {
                 stroke-linejoin="round"
               />
             </svg>
-            <p className="hidden min-[512px]:block">Home</p>
+            <p className="hidden min-[512px]:block group-hover:-translate-y-[1px] transition-all duration-300">Home</p>
           </div>
         </Link>
         <Link href="/matches" passHref>
           <div className="group text-black hover:text-gray-600 text-sm font-medium flex items-center space-x-2">
             <svg
-              className="group-hover:opacity-60 transition-all duration-300"
+              className="group-hover:opacity-60 group-hover:-rotate-12 transition-all duration-300"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -47,13 +47,13 @@ function Header() {
                 stroke-linejoin="round"
               />
             </svg>
-            <p className="hidden min-[512px]:block ">Matches</p>
+            <p className="hidden min-[512px]:block group-hover:-translate-y-[1px] transition-all duration-300">Matches</p>
           </div>
         </Link>
         <Link href="/profile" passHref>
           <div className="group text-black hover:text-gray-600 text-sm font-medium cursor-pointer flex items-center space-x-2">
             <svg
-              className="group-hover:opacity-60 transition-all duration-300"
+              className="group-hover:opacity-60 group-hover:-rotate-12 transition-all duration-300"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -75,7 +75,7 @@ function Header() {
                 stroke-linejoin="round"
               />
             </svg>
-            <p className="hidden min-[512px]:block ">Profile</p>
+            <p className="hidden min-[512px]:block group-hover:-translate-y-[1px] transition-all duration-300">Profile</p>
           </div>
         </Link>
       </nav>
