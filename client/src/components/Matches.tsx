@@ -29,11 +29,11 @@ const MatchedProfile: React.FC<MatchedProfileProps> = ({
         <img
           className="w-full h-auto"
           src={(
-            data?.profile?.picture?.original?.url 
+            data?.profile?.picture?.original?.url
           ).replace(
             "ipfs://",
             "https://cloudflare-ipfs.com/ipfs/"
-          )}  
+          )}
           alt=""
         />
       </div>
@@ -72,7 +72,7 @@ const Matches: React.FC = () => {
   if (loading) return <p>Loading...</p>;
   if (error)
     return (
-      <div className="container max-w-lg mx-auto px-4 min-[512px]:px-0">
+      <div className="container max-w-lg mx-auto px-4 min-[540px]:px-0">
         <h1 className="text-3xl font-bold text-black mt-10 mb-5">
           My Matches
         </h1>

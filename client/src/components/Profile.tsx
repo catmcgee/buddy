@@ -24,7 +24,7 @@ function Profile() {
     return (
       <div className="profile-component flex flex-col items-center">
         <div className="w-full max-w-lg mt-10">
-          <h1 className="text-3xl text-black font-bold mb-2 px-4 min-[512px]:px-0">
+          <h1 className="text-3xl text-black font-bold mb-2 px-4 min-[540px]:px-0">
             My Profile
           </h1>
           <div className="bg-white rounded-lg shadow-md p-4 w-full">
