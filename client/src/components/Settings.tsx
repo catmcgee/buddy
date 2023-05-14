@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 
 const interests = [
-  "Hackathon Winner",
+  "Previous Hackathon Winner",
+  "Early ETH Contributor",
   "Core ETH Contributor",
-  "Early ETH User",
   "Crypto Bro",
+  "AAVE Maxi",
+  "Early Lens User",
+  "ZK Contributor",
+  "New to Web3",
 ];
 
 function Settings() {

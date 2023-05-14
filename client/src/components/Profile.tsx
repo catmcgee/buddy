@@ -150,13 +150,10 @@ function Profile() {
                 </h3>
                 <div className="flex gap-2 flex-wrap">
                   <span className="bg-gray-200 px-2 py-1 rounded-full text-sm font-medium text-gray-700">
-                    ZK Badge 1
+                    Early ETH Contributor
                   </span>
                   <span className="bg-gray-200 px-2 py-1 rounded-full text-sm font-medium text-gray-700">
-                    ZK Badge 2
-                  </span>
-                  <span className="bg-gray-200 px-2 py-1 rounded-full text-sm font-medium text-gray-700">
-                    Zk Badge 3
+                    Previous Hackathon Winner
                   </span>
                 </div>
               </div>
