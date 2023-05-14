@@ -7,7 +7,7 @@ function ProfilePage() {
   return (
     <div>
       <Header />
-      <main>
+      <main className="min-h-screen h-auto">
         <SignInButton />
       </main>
       <footer className="container max-w-lg w-full mx-auto p-4">

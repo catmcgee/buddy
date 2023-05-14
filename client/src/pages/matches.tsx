@@ -9,11 +9,10 @@ function ProfilePage() {
     <ApolloProvider client={client}>
       <div>
         <Header />
-        <main>
+        <main className="min-h-screen h-auto">
           <Matches />
         </main>
         <footer className="container max-w-lg w-full mx-auto p-4">
-          {/* Footer content goes here */}
           <p className="text-black">
             Made by
             <a

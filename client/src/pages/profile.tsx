@@ -7,7 +7,7 @@ function ProfilePage() {
   return (
     <div>
       <Header />
-      <main className="pb-10">
+      <main className="min-h-screen h-auto pb-10">
         <Profile />
         <Settings />
       </main>
