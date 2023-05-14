@@ -42,21 +42,6 @@ function Swipe() {
       })
     ) || [];
 
-  // <a
-  //   href={
-  //     "http://www.twitter.com/" +
-  //     profileQuery?.data?.defaultProfile?.attributes?.[8]
-  //       ?.value
-  //   }
-  //   target="_blank"
-  //   rel="noopener noreferrer"
-  // >
-  //   {
-  //     profileQuery?.data?.defaultProfile?.attributes?.[8]
-  //       ?.value
-  //   }
-  // </a>;
-
   const [lastDirection, setLastDirection] =
     useState<SwipeDirection | null>(null);
   const [swipedProfiles, setSwipedProfiles] = useState<
@@ -119,7 +104,7 @@ function Swipe() {
               onSwipe(dir as SwipeDirection, user.id)
             }
             preventSwipe={["up", "down"]}
-            className={`absolute rounded-lg  shadow-md w-full h-auto p-4 bg-white transform transition-all duration-300 ${
+            className={`absolute rounded-lg border-2 border-solid border-gray-100 w-full h-auto p-4 bg-white transform transition-all duration-300 ${
               index === 0 ? "z-10" : "hidden"
             }`}
           >
@@ -261,7 +246,16 @@ function Swipe() {
               </div>
               {user.twitter && (
                 <h4 className="text-base text-black mb-2">
-                  {user.twitter}
+                  <a
+                    href={
+                      "http://www.twitter.com/" +
+                      user.twitter
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {user.twitter}
+                  </a>
                 </h4>
               )}
               {!user.twitter && (
