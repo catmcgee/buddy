@@ -31,16 +31,16 @@ const MatchedProfile: React.FC<MatchedProfileProps> = ({
       <li onClick={handleClick}
 
       className="w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
-        
+
       <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
         <img
           className="w-full h-auto"
           src={(
-            data?.profile?.picture?.original?.url 
+            data?.profile?.picture?.original?.url
           ).replace(
             "ipfs://",
             "https://cloudflare-ipfs.com/ipfs/"
-          )}  
+          )}
           alt=""
         />
       </div>
@@ -76,7 +76,7 @@ const Matches: React.FC = () => {
     }
   );
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 max-w-lg">
       <h1 className="text-2xl font-bold text-gray-900 mt-10 mb-5">
         My Matches
       </h1>
