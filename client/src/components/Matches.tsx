@@ -7,6 +7,7 @@ import {
   ProfileQueryVariables,
 } from "../graphql/generated";
 import useLensUser from "@/lib/auth/useLensUser";
+import { useRouter } from "next/router";
 
 interface MatchedProfileProps {
   matchId: string;
@@ -16,15 +17,22 @@ interface MatchedProfileProps {
 const MatchedProfile: React.FC<MatchedProfileProps> = ({
   matchId,
 }) => {
+  const router = useRouter();
   const { data, error, isLoading } = useProfileQuery({
     request: { profileId: matchId },
   });
-
-  if (isLoading) return <p>Loading profile...</p>;
-  if (error) return <p>Error loading profile</p>;
+  const handleClick = () => {
+    // Replace "conversation-page" with the path to your conversation page component
+    router.push(`/conversation/${matchId}`);
+  };
+  if (isLoading) return <p>Loading matches...</p>;
+  if (error) return <p>Error loading matches</p>;
 
   return (
-      <li className="match kevin w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
+      <li       onClick={handleClick}
+
+      className="w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
+        
       <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
         <img
           className="w-full h-auto"
@@ -68,130 +76,6 @@ const Matches: React.FC = () => {
       },
     }
   );
-
-  if (loading) return <p>Loading...</p>;
-  if (error)
-    return (
-      <div className="container max-w-lg mx-auto px-4 min-[512px]:px-0">
-        <h1 className="text-3xl font-bold text-black mt-10 mb-5">
-          My Matches
-        </h1>
-              ) : (
-          <p className="text-gray-600">No matches yet.</p>
-        )
-        <ul className="match-list flex flex-col gap-4">
-          <li className="match kevin w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
-            <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
-              <img
-                className="w-full h-auto"
-                src="../images/kevin.JPG"
-                alt=""
-              />
-            </div>
-            <div className="details flex flex-col w-full overflow-hidden">
-              <div className="detail flex justify-start w-full items-center">
-                <p className="name text-xl font-bold min-[500px]:text-xl text-black">
-                  Kevin Canlas
-                </p>
-              </div>
-              <div className="detail flex justify-start w-full items-center mt-0">
-                <p className="lens-id text-sm min-[500px]:text-base text-gray-500">
-                  @kvncnls.lens
-                </p>
-              </div>
-              <div className="detail flex justify-start w-full items-center mt-4 overflow-hidden">
-                <p className="bio text-sm min-[500px]:text-base text-black w-96 whitespace-nowrap overflow-hidden text-ellipsis">
-                  Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit...
-                </p>
-              </div>
-            </div>
-          </li>
-          <li className="match hover:bg-gray-100 cat w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
-            <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
-              <img
-                className="w-full h-auto"
-                src="../images/cat.jpeg"
-                alt=""
-              />
-            </div>
-            <div className="details flex flex-col w-full overflow-hidden">
-              <div className="detail flex justify-start w-full items-center">
-                <p className="name text-xl font-bold min-[500px]:text-xl text-black">
-                  Cat McGee
-                </p>
-              </div>
-              <div className="detail flex justify-start w-full items-center mt-0">
-                <p className="lens-id text-sm min-[500px]:text-base text-gray-500">
-                  @CatMcGeeCode.lens
-                </p>
-              </div>
-              <div className="detail flex justify-start w-full items-center mt-4 overflow-hidden">
-                <p className="bio text-sm min-[500px]:text-base text-black w-96 whitespace-nowrap overflow-hidden text-ellipsis">
-                  Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit...
-                </p>
-              </div>
-            </div>
-          </li>
-          <li className="match hover:bg-gray-100 kevin w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
-            <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
-              <img
-                className="w-full h-auto"
-                src="../images/kevin.JPG"
-                alt=""
-              />
-            </div>
-            <div className="details flex flex-col w-full overflow-hidden">
-              <div className="detail flex justify-start w-full items-center">
-                <p className="name text-xl font-bold min-[500px]:text-xl text-black">
-                  Kevin Canlas
-                </p>
-              </div>
-              <div className="detail flex justify-start w-full items-center mt-0">
-                <p className="lens-id text-sm min-[500px]:text-base text-gray-500">
-                  @kvncnls.lens
-                </p>
-              </div>
-              <div className="detail flex justify-start w-full items-center mt-4 overflow-hidden">
-                <p className="bio text-sm min-[500px]:text-base text-black w-96 whitespace-nowrap overflow-hidden text-ellipsis">
-                  Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit...
-                </p>
-              </div>
-            </div>
-          </li>
-          <li className="match hover:bg-gray-100 cat w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
-            <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
-              <img
-                className="w-full h-auto"
-                src="../images/cat.jpeg"
-                alt=""
-              />
-            </div>
-            <div className="details flex flex-col w-full overflow-hidden">
-              <div className="detail flex justify-start w-full items-center">
-                <p className="name text-xl font-bold min-[500px]:text-xl text-black">
-                  Cat McGee
-                </p>
-              </div>
-              <div className="detail flex justify-start w-full items-center mt-0">
-                <p className="lens-id text-sm min-[500px]:text-base text-gray-500">
-                  @CatMcGeeCode.lens
-                </p>
-              </div>
-              <div className="detail flex justify-start w-full items-center mt-4 overflow-hidden">
-                <p className="bio text-sm min-[500px]:text-base text-black w-96 whitespace-nowrap overflow-hidden text-ellipsis">
-                  Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit...
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    );
-
   return (
     <div className="container mx-auto px-4">
       <h1 className="text-2xl font-bold text-gray-900 mt-10 mb-5">
