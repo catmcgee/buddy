@@ -24,8 +24,8 @@ const MatchedProfile: React.FC<MatchedProfileProps> = ({
   const handleClick = () => {
     router.push(`/conversation/${matchId}`);
   };
-  if (isLoading) return <p>Loading matches...</p>;
-  if (error) return <p>Error loading matches</p>;
+  if (isLoading) return <p></p>;
+  if (error) return <p></p>;
 
   return (
       <li onClick={handleClick}
