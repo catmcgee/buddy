@@ -104,7 +104,7 @@ function Swipe() {
               onSwipe(dir as SwipeDirection, user.id)
             }
             preventSwipe={["up", "down"]}
-            className={`absolute rounded-lg  shadow-md w-full h-auto p-4 bg-white transform transition-all duration-300 ${
+            className={`absolute rounded-lg  border-2 border-gray-200 pb-8 w-full h-auto p-4 bg-white transform transition-all duration-300 ${
               index === 0 ? "z-10" : "hidden"
             }`}
           >
