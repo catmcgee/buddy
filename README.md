@@ -10,7 +10,7 @@
 
 <h3 align="center">Buddy</h3>
 
-  <p align="center">
+  <p align="left">
     Find the perfect web3 hackathon partner in a familiar Tinder UI.
     Use ZK proofs to verify your crypto skills and knowledge.
     <br />
@@ -18,34 +18,6 @@
     <a href="https://docs.google.com/presentation/d/11DWzieaZGtKVAD6a6CgLQSoMCTV2kTfpKzdSTWKbu6w/edit?usp=sharing">View Deck</a>
   </p>
 </div>
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
 
 
 <!-- ABOUT THE PROJECT -->
