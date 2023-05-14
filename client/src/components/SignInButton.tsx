@@ -58,7 +58,7 @@ import {
       return (
         <div>
         <div>
-            You are logged in, just havent implemented anything yet lol
+            You are logged in, just havent implemented the flow here yet lol
           <MediaRenderer
             // @ts-ignore
             src={profileQuery?.data?.defaultProfile?.picture?.original?.url || ""}

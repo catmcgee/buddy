@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { ALL_MATCHES_QUERY } from "../graphql/swipe";
@@ -9,6 +10,7 @@ import useLensUser from "@/lib/auth/useLensUser";
 
 interface MatchedProfileProps {
   matchId: string;
+  image: string;
 }
 
 const MatchedProfile: React.FC<MatchedProfileProps> = ({
@@ -22,12 +24,35 @@ const MatchedProfile: React.FC<MatchedProfileProps> = ({
   if (error) return <p>Error loading profile</p>;
 
   return (
-    <li className="bg-white rounded-lg shadow px-5 py-3 my-3 flex items-center justify-between">
-      <div className="text-lg font-semibold text-gray-700">
-        Match ID: {matchId}
+      <li className="match kevin w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
+      <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
+        <img
+          className="w-full h-auto"
+          src={(
+            data?.profile?.picture?.original?.url 
+          ).replace(
+            "ipfs://",
+            "https://cloudflare-ipfs.com/ipfs/"
+          )}  
+          alt=""
+        />
       </div>
-      <div className="text-sm text-gray-500">
-        {data ? data?.profile?.name : "Loading..."}
+      <div className="details flex flex-col w-full overflow-hidden">
+        <div className="detail flex justify-start w-full items-center">
+          <p className="name text-xl font-bold min-[500px]:text-xl text-black">
+            {data ? data?.profile?.name : "Loading..."}
+          </p>
+        </div>
+        <div className="detail flex justify-start w-full items-center mt-0">
+          <p className="lens-id text-sm min-[500px]:text-base text-gray-500">
+            {data ? data?.profile?.handle : "Loading handle..."}
+          </p>
+        </div>
+        <div className="detail flex justify-start w-full items-center mt-4 overflow-hidden">
+          <p className="bio text-sm min-[500px]:text-base text-black w-96 whitespace-nowrap overflow-hidden text-ellipsis">
+            {data ? data?.profile?.bio : "Loading bio..."}
+          </p>
+        </div>
       </div>
     </li>
   );
@@ -45,25 +70,15 @@ const Matches: React.FC = () => {
   );
 
   if (loading) return <p>Loading...</p>;
-  // if (error) return <p>Error :(</p>;
   if (error)
     return (
       <div className="container max-w-lg mx-auto px-4 min-[512px]:px-0">
         <h1 className="text-3xl font-bold text-black mt-10 mb-5">
           My Matches
         </h1>
-        {/* {data?.allMatches && data.allMatches.length > 0 ? (
-          <ul>
-            {data.allMatches.map((matchId: any) => (
-              <MatchedProfile
-                key={matchId}
-                matchId={matchId}
-              />
-            ))}
-          </ul>
-        ) : (
+              ) : (
           <p className="text-gray-600">No matches yet.</p>
-        )} */}
+        )
         <ul className="match-list flex flex-col gap-4">
           <li className="match kevin w-full h-auto py-4 flex items-start justify-start border-b-2 border-gray-100 gap-4 cursor-pointer">
             <div className="image-container min-w-[80px] w-32 h-auto min-[420px]:w-48 min-[420px]:h-auto">
@@ -180,7 +195,7 @@ const Matches: React.FC = () => {
   return (
     <div className="container mx-auto px-4">
       <h1 className="text-2xl font-bold text-gray-900 mt-10 mb-5">
-        Your Matches
+        My Matches
       </h1>
       {data?.allMatches && data.allMatches.length > 0 ? (
         <ul>
@@ -188,6 +203,7 @@ const Matches: React.FC = () => {
             <MatchedProfile
               key={matchId}
               matchId={matchId}
+              image={data?.profile?.image}
             />
           ))}
         </ul>

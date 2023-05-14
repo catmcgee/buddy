@@ -98,7 +98,7 @@ function Profile() {
                   </div>
 
                   <h4 className="text-base text-black mb-2">
-                    ENS Address Here
+                    {profileQuery.data?.defaultProfile?.onChainIdentity?.ens?.name}
                   </h4>
                 </div>
                 <div className="twitter flex space-x-2">
@@ -121,7 +121,8 @@ function Profile() {
                   </div>
 
                   <h4 className="text-base text-black mb-2">
-                    Twitter Address Here
+                  {profileQuery.data.defaultProfile?.onChainIdentity?.sybilDotOrg.source.twitter.handle ? profileQuery.data.defaultProfile?.onChainIdentity?.sybilDotOrg.source.twitter?.handle : "No Twitter connected"}
+
                   </h4>
                 </div>
               </div>

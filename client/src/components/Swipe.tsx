@@ -16,6 +16,9 @@ function Swipe() {
     id: string;
     name: string | null | undefined;
     bio: string | null | undefined;
+    lens: string | null | undefined;
+    twitter: any;
+    ens: any,
     picture: any;
   };
 
@@ -30,6 +33,9 @@ function Swipe() {
         id: profile.id,
         name: profile.name,
         bio: profile.bio,
+        lens: profile.handle,
+        twitter: profile.onChainIdentity.sybilDotOrg.source.twitter.handle,
+        ens: profile.onChainIdentity.ens?.name,
         picture: profile.picture || null,
       })
     ) || [];
@@ -144,7 +150,7 @@ function Swipe() {
                   </h2>
                 </div>
                 <p className="lens-handle text-sm">
-                  @lenshandle.lens
+                  {user.lens}
                 </p>
               </div>
             </div>
@@ -202,7 +208,7 @@ function Swipe() {
               </div>
 
               <h4 className="text-base text-black mb-2">
-                ENS Address Here
+                {user.ens}
               </h4>
             </div>
             <div className="twitter flex space-x-2">
@@ -225,7 +231,7 @@ function Swipe() {
               </div>
 
               <h4 className="text-base text-black mb-2">
-                Twitter Address Here
+                {user.twitter}
               </h4>
             </div>
             <h3 className="zoinks pointer-events-none text-2xl text-black font-bold my-2">
