@@ -151,7 +151,7 @@ function Swipe() {
                     {user.name}
                   </h2>
                 </div>
-                <p className="lens-handle text-sm">
+                <p className="lens-handle text-sm text-white">
                   {user.lens}
                 </p>
               </div>

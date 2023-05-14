@@ -146,7 +146,7 @@ function Profile() {
             <div className="flex flex-col space-y-6">
               <div>
                 <h3 className="text-lg font-bold mb-2 text-black">
-                  My Proven Skills
+                  My Zoinks
                 </h3>
                 <div className="flex gap-2 flex-wrap">
                   <span className="bg-gray-200 px-2 py-1 rounded-full text-sm font-medium text-gray-700">
