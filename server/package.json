@@ -1,11 +1,29 @@
 {
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2",
+    "express": "^4.20.0",
     "express-graphql": "^0.12.0",
     "graphql": "^15.8.0",
     "pg": "^8.10.0",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.31.1"
+    "sequelize": "^6.37.8"
+  },
+  "overrides": {
+    "proxy-addr": "^2.0.8",
+    "moment": "^2.31.0",
+    "qs": "^6.16.0",
+    "sequelize": "$sequelize",
+    "body-parser": "^1.20.6",
+    "uuid": "^11.1.1",
+    "dottie": "^2.0.4",
+    "lodash": "^4.18.0",
+    "path-to-regexp": "^0.1.13",
+    "underscore": "^1.13.8",
+    "validator": "^13.15.22",
+    "cookie": "^0.7.0",
+    "send": "^0.19.0",
+    "serve-static": "^1.16.0",
+    "express": "$express",
+    "semver": "^7.5.2"
   }
 }
